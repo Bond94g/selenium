@@ -1,0 +1,10 @@
+{
+  "name": "unit-4.1",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "assert": "^1.4.1",
+    "mocha": "5.2.0",
+    "selenium-webdriver": "3.6.0"
+  }
+}
