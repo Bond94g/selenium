@@ -1,10 +1,9 @@
-const {Builder, By, Key, WebDriver} = require('selenium-webdriver');
+const {Builder, By} = require('selenium-webdriver');
 const test = require('selenium-webdriver/testing');
 const assert = require('assert');
 
 test.describe('litecart', function () {
     let driver;
-    let d;
 
     test.before(function* () {
         driver = yield new Builder()
