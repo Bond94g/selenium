@@ -1,5 +1,6 @@
 const {Builder, By, Key} = require('selenium-webdriver');
 const test = require('selenium-webdriver/testing');
+const assert = require('assert');
 test.describe('litecart', function () {
     let driver;
 
@@ -10,66 +11,67 @@ test.describe('litecart', function () {
             .build();
     });
 
-    test.it('test', function () {
+    test.it('Most Popular products', async function () {
         driver.get('http://localhost/litecart');
 
-        driver.findElement(By.xpath('//*[@id="box-most-popular"]/h3[normalize-space(.)=\'Most Popular\']')).then(function () {
-            return true;
-        });
+        let products = By.xpath('//div[@id =\'box-most-popular\']//li[contains(@class, \'product\')]');
+        driver.findElements(products)
+            .then(values => {
+                for (let i = 1; i <= values.length; i++) {
+                    let xpathStickers = '//div[@id =\'box-most-popular\']//li[contains(@class, \'product\')][' + i + ']//div[contains(@class, \'sticker\')]';
+                    driver.findElements(By.xpath(xpathStickers))
+                        .then(elements => {
+                            //проверяем количество стикеров у товара
+                            assert.equal(elements.length, 1);
+                            let promises = elements.map(el => el.getText());
+                            return Promise.all(promises);
+                        })
+                        .then(value => {
+                            if (value[0] == 'NEW' || value[0] == 'SALE') {
+                                return true;
+                            }
+                            else {
+                                return false;
+                            }
+                        })
+                        .then(val => assert.equal(val, true));
+                }
+            })
+    });
 
+    test.it('Latest Products', async function () {
+        driver.get('http://localhost/litecart');
 
-        driver.findElement(By.xpath('//*[@id="box-most-popular"]//a[@title=\'Purple Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
+        let products = By.xpath('//div[@id =\'box-latest-products\']//li[contains(@class, \'product\')]');
+        driver.findElements(products)
+            .then(values => {
+                for (let i = 1; i <= values.length; i++) {
+                    let xpathStickers = '//div[@id =\'box-latest-products\']//li[contains(@class, \'product\')][' + i + ']//div[contains(@class, \'sticker\')]';
+                    driver.findElements(By.xpath(xpathStickers))
+                        .then(elements => {
+                            assert.equal(elements.length, 1);
+                            let promises = elements.map(el => el.getText());
+                            return Promise.all(promises);
+                        })
+                        .then(value => {
+                            if (value[0] == 'NEW' || value[0] == 'SALE') {
+                                return true;
+                            }
+                            else {
+                                return false;
+                            }
+                        })
+                        .then(val => assert.equal(val, true));
+                }
+            })
+    });
+    test.it('Campaigns products', async function () {
+        driver.get('http://localhost/litecart');
+        let xpathStickers = '//div[@id =\'box-campaigns\']//li[contains(@class, \'product\')][1]//div[contains(@class, \'sticker\')]';
+        let sticker = await driver.findElement(By.xpath(xpathStickers)).getText();
 
-        driver.findElement(By.xpath('//*[@id="box-most-popular"]//a[@title=\'Blue Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
+        assert.equal('SALE', sticker);
 
-        driver.findElement(By.xpath('//*[@id="box-most-popular"]//a[@title=\'Red Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-most-popular"]//a[@title=\'Green Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-most-popular"]//a[@title=\'Yellow Duck\']//div[@title=\'On Sale\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-campaigns"]/h3[normalize-space(.)=\'Campaigns\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-campaigns"]//a[@title=\'Yellow Duck\']//div[@title=\'On Sale\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-latest-products"]/h3[normalize-space(.)=\'Latest Products\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-latest-products"]//a[@title=\'Yellow Duck\']//div[@title=\'On Sale\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-latest-products"]//a[@title=\'Purple Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-latest-products"]//a[@title=\'Blue Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-latest-products"]//a[@title=\'Red Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
-
-        driver.findElement(By.xpath('//*[@id="box-latest-products"]//a[@title=\'Green Duck\']//div[@title=\'New\']')).then(function () {
-            return true;
-        });
     });
     test.after(() => driver.quit());
-
 });
