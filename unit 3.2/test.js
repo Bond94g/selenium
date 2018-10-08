@@ -23,11 +23,11 @@ test.describe('litecart', function () {
                         .then(elements => {
                             //проверяем количество стикеров у товара
                             assert.equal(elements.length, 1);
-                            let promises = elements.map(el => el.getText());
+                            let promises = elements.map(el => el.getAttribute('className'));
                             return Promise.all(promises);
                         })
                         .then(value => {
-                            if (value[0] == 'NEW' || value[0] == 'SALE') {
+                            if (value[0].includes('sticker')) {
                                 return true;
                             }
                             else {
@@ -50,11 +50,11 @@ test.describe('litecart', function () {
                     driver.findElements(By.xpath(xpathStickers))
                         .then(elements => {
                             assert.equal(elements.length, 1);
-                            let promises = elements.map(el => el.getText());
+                            let promises = elements.map(el => el.getAttribute('className'));
                             return Promise.all(promises);
                         })
                         .then(value => {
-                            if (value[0] == 'NEW' || value[0] == 'SALE') {
+                            if (value[0].includes('sticker')) {
                                 return true;
                             }
                             else {
@@ -68,9 +68,9 @@ test.describe('litecart', function () {
     test.it('Campaigns products', async function () {
         driver.get('http://localhost/litecart');
         let xpathStickers = '//div[@id =\'box-campaigns\']//li[contains(@class, \'product\')][1]//div[contains(@class, \'sticker\')]';
-        let sticker = await driver.findElement(By.xpath(xpathStickers)).getText();
+        let sticker = await driver.findElement(By.xpath(xpathStickers)).getAttribute('className');
 
-        assert.equal('SALE', sticker);
+        assert.equal(sticker.includes('sticker'), true);
 
     });
     test.after(() => driver.quit());

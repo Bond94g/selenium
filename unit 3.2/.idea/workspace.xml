@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87170d90-4b19-48b1-a32d-9205fc0acb17" name="Default Changelist" comment="" />
+    <list default="true" id="87170d90-4b19-48b1-a32d-9205fc0acb17" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -49,17 +52,18 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1621" />
+          <entry key="js" value="1802" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1621" />
+          <entry key="JavaScript" value="1802" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -88,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="76" column="3" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
+            <state relative-caret-position="135">
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -206,46 +210,47 @@
       <updated>1538072357322</updated>
       <workItem from="1538072371867" duration="2144000" />
       <workItem from="1538675781324" duration="12988000" />
+      <workItem from="1539016684420" duration="2622000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unnamed - 2018.10.05 at 23h 28m 50s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 48m 21s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.05 at 23h 32m 38s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 48m 37s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.05 at 23h 36m 12s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 50m 06s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.05 at 23h 36m 29s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 50m 17s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.05 at 23h 36m 52s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 50m 37s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.05 at 23h 36m 59s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 51m 25s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.05 at 23h 37m 07s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 51m 47s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.06 at 12h 34m 58s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 52m 32s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.06 at 12h 35m 09s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 52m 39s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Unnamed - 2018.10.06 at 12h 35m 51s.xml">
+    <history-entry file="Unnamed - 2018.10.08 at 22h 53m 17s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15132000" />
+    <option name="totallyTimeSpent" value="17754000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="825" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="830" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
@@ -254,7 +259,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3287858" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39972714" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -279,14 +284,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test.js</url>
-          <line>29</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test.js</url>
           <line>36</line>
-          <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
@@ -323,13 +321,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/selenium-webdriver/lib/by.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -337,10 +328,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="76" column="3" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
+        <state relative-caret-position="135">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>
