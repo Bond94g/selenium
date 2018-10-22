@@ -41,10 +41,7 @@ test.describe('Litecart', function () {
         await app.cart_page.checkProductsDeleted();
 
     });
-
-    //test.it(function () {
-
-    //});
+    
 
     test.after(function () {
         app.quit();
